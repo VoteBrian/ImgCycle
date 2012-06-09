@@ -1,4 +1,4 @@
-package net.votebrian.demos;
+package net.votebrian.demos.imgcycle;
 
 import android.app.Activity;
 import android.content.res.TypedArray;
