@@ -14,6 +14,9 @@ public class ImgCycleActivity extends Activity {
     int currBG = 0;
     int totalBG;
 
+    // time between image changes in ms
+    int interval = 5000;
+
     private final Runnable runDrawBG =  new Runnable() {
         public void run() {
             drawBG();
@@ -42,7 +45,7 @@ public class ImgCycleActivity extends Activity {
 
         // first remove any runnables currently running
         mHandler.removeCallbacks(runDrawBG);
-        mHandler.postDelayed(runDrawBG, 1000);
+        mHandler.postDelayed(runDrawBG, interval);
     }
 
     public void onDestroy() {
